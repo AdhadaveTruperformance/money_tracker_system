@@ -8,8 +8,23 @@ body {
 }
 .tracker
 {
-    padding: 100px 0px;
+    padding: 80px 0px;
+    background-image: url(images/pexels-pixabay-259027.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
+
+/* .tracker video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.6;
+} */
 .container {
     display: flex;
     justify-content: center;
@@ -20,6 +35,7 @@ body {
 
 /* Left-side section (Transaction Tracker) */
 .left-side {
+    opacity: 0.9;
     flex: 1;
     background-color: #fff;
     border-radius: 8px;
@@ -28,12 +44,28 @@ body {
     /* width: 100%;
     max-width: 500px; */
     margin-bottom: 20px;
+   
 }
-
-h1 {
-    text-align: center;
-    color: #333;
+p
+{
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 187.5% */
+}
+h1, h2 {
     margin-bottom: 20px;
+    color: #000;
+        /* color: #fff; */
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46px; 
 }
 
 /* Form Styling */
@@ -47,8 +79,22 @@ form {
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
-
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    }
 form input {
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
@@ -69,6 +115,14 @@ form button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    margin-top: 20px;
 }
 
 form button:hover {
@@ -77,6 +131,7 @@ form button:hover {
 
 /* Right-side section (Person's List with Search) */
 .right-side {
+    opacity: 0.9;
     flex: 1;
     background-color: #fff;
     border-radius: 8px;
@@ -165,8 +220,16 @@ form button:hover {
     border: 1px solid #ddd;
     margin-right: 10px;
     transition: border-color 0.3s ease;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
 }
-
+button:focus {
+    /* outline: 1px dotted; */
+    outline: none!important;
+}
 .search-container input:focus {
     border-color: #4CAF50;
     outline: none;
@@ -220,7 +283,7 @@ form button:hover {
     border-radius: 8px;
     text-align: center;
     width: 90%;
-    max-width: 300px;
+    max-width: 350px;
 }
 
 .confirmation-popup button {
@@ -257,6 +320,13 @@ form button:hover {
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s ease;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px; 
 }
 
 .clear-all-btn:hover {
@@ -288,8 +358,11 @@ form button:hover {
     }
 
     .transaction-item {
-        flex-direction: column;
-        align-items: flex-start;
+        /* flex-direction: column;
+        align-items: flex-start; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .transaction-item button {
